@@ -9,14 +9,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-
-import com.app.transactions.rest.requests.AddTransaction;
+import lombok.NoArgsConstructor;
 
 @Getter
 @Entity
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Transaction {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
