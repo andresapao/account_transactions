@@ -1,4 +1,6 @@
-FROM openjdk:11-jre-slim-buster
+FROM maven:3.8.4-jdk-11-slim
 MAINTAINER andresapao
-COPY target/transactions-0.0.1-SNAPSHOT.jar transactions-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","/transactions-0.0.1-SNAPSHOT.jar"]
+WORKDIR /transactions
+COPY . .
+RUN mvn clean install
+CMD mvn spring-boot:run
