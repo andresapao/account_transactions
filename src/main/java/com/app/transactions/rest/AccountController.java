@@ -28,8 +28,8 @@ public class AccountController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public void addAccount(@RequestBody AddAccount command) {
-		addAccountService.apply( command );
+	public AccountDto addAccount(@RequestBody AddAccount command) {
+		return AccountDto.from( addAccountService.apply( command ));
 
 	}
 

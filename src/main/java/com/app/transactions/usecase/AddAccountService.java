@@ -12,7 +12,7 @@ import com.app.transactions.rest.requests.AddAccount;
 @AllArgsConstructor
 public class AddAccountService {
 	private final AccountRepository accountRepository;
-	public void apply(AddAccount command) {
-		accountRepository.save(Account.builder().documentNumber( command.getDocumentNumber() ).build());
+	public Account apply(AddAccount command) {
+		return accountRepository.save(Account.builder().documentNumber( command.getDocumentNumber() ).build());
 	}
 }

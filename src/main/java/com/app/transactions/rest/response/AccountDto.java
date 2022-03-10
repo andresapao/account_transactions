@@ -1,10 +1,18 @@
 package com.app.transactions.rest.response;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import com.app.transactions.entities.Account;
 
 @Builder
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class AccountDto {
 	private Long accountId;
 
