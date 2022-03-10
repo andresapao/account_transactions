@@ -6,12 +6,12 @@ An application which allows to create account and transactions related to it.
 
 ## STACK
 
-Java 11, SpringBoot, Maven, Mysql, docker, docker-compose
+Java 11, SpringBoot, Maven, Mysql, docker
 
 ## BUILD AND PACKAGE
 
-- Run "mvn clean package"
-- Run docker-compose up 
+- Maven, Java and Mysql will be at docker containers
+- Run "docker-compose up" at root directory 
   - MySql will be available at localhost:3307
   - Application will always create and drop database
 - There will be two endpoints available at localhost:8999 ("accounts" and "transacations")
